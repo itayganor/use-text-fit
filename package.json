@@ -1,0 +1,23 @@
+{
+  "name": "use-text-fit",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "use-fit-text": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.32",
+    "typescript": "^3.8.3"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "itayganor",
+  "license": "MIT",
+  "files": ["dist/**/*"]
+}
