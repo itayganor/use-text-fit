@@ -3,7 +3,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 
 
 export default function useTextFit() {
-    const ref = useRef<HTMLElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
 
     const resizeObserver = new ResizeObserver(() => {
         reCalculate();
