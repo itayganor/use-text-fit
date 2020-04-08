@@ -1,7 +1,7 @@
 {
   "name": "use-text-fit",
   "description": "A hook used to fit text in one line inside its container.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
@@ -21,5 +21,6 @@
   "types": "dist/index.d.ts",
   "author": "itayganor",
   "license": "MIT",
-  "files": ["dist/**/*"]
+  "files": ["dist/**/*"],
+  "repository": "https://github.com/itayganor/use-text-fit"
 }
