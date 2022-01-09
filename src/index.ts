@@ -1,11 +1,10 @@
 import {useEffect, useRef} from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
 
 
 export default function useTextFit() {
     const ref = useRef<HTMLDivElement>(null);
 
-    const resizeObserver = new ResizeObserver(() => {
+    const resizeObserver = new window.ResizeObserver(() => {
         reCalculate();
     });
 
