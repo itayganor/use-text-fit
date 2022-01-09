@@ -1,7 +1,7 @@
 {
   "name": "use-text-fit",
   "description": "A hook used to fit text in one line inside its container.",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"

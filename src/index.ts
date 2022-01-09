@@ -23,6 +23,8 @@ export default function useTextFit() {
     }, [ref]);
 
     function reCalculate() {
+        if (!ref.current) return;
+
         ref.current.style.fontSize = '';
 
         const text = ref.current.innerText;
