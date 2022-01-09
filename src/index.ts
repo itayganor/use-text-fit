@@ -10,15 +10,16 @@ export default function useTextFit() {
     });
 
     useEffect(() => {
-        if (!ref.current) {
+        const element = ref.current;
+        if (!element) {
             return;
         }
 
-        ref.current.style.display = 'inline-block'; // so widths calculation fit text and not container
+        element.style.display = 'inline-block'; // so widths calculation fit text and not container
         reCalculate();
 
-        resizeObserver.observe(ref.current);
-        return () => resizeObserver.unobserve(ref.current);
+        resizeObserver.observe(element);
+        return () => resizeObserver.unobserve(element);
     }, [ref]);
 
     function reCalculate() {
