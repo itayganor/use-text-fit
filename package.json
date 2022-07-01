@@ -1,17 +1,15 @@
 {
   "name": "use-text-fit",
   "description": "A hook used to fit text in one line inside its container.",
-  "version": "1.0.6",
+  "version": "2.0.1",
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "resize-observer-polyfill": "^1.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/react": "^16.9.32",
-    "typescript": "^3.8.3"
+    "@types/react": "17.0.38",
+    "typescript": "4.5.4"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17.0.0 || ^18.0.0",

@@ -1,27 +1,29 @@
 import {useEffect, useRef} from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
 
 
 export default function useTextFit() {
     const ref = useRef<HTMLDivElement>(null);
 
-    const resizeObserver = new ResizeObserver(() => {
+    const resizeObserver = new window.ResizeObserver(() => {
         reCalculate();
     });
 
     useEffect(() => {
-        if (!ref.current) {
+        const element = ref.current;
+        if (!element) {
             return;
         }
 
-        ref.current.style.display = 'inline-block'; // so widths calculation fit text and not container
+        element.style.display = 'inline-block'; // so widths calculation fit text and not container
         reCalculate();
 
-        resizeObserver.observe(ref.current);
-        return () => resizeObserver.unobserve(ref.current);
+        resizeObserver.observe(element);
+        return () => resizeObserver.unobserve(element);
     }, [ref]);
 
     function reCalculate() {
+        if (!ref.current) return;
+
         ref.current.style.fontSize = '';
 
         const text = ref.current.innerText;
